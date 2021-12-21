@@ -5,7 +5,7 @@ import {Button, InputGroup, FormControl} from 'react-bootstrap';
 class App extends React.Component{
 
    state={todos : [{id : 0, task : "eat", done :false},{id : 1, task : "sleep", done :false},{id : 2, task : "repeat", done :false}], text:""}
-
+// ---------------
    addTodos=()=>{ this.setState({todos : [...this.state.todos, {id : Math.random(), task : this.state.text, done :false}]})  }
    deleteTodos=(id)=>{ this.setState({ todos :this.state.todos.filter(el=>el.id!==id) })    }
    doneTodos=(id)=>{this.setState({todos : this.state.todos.map(el=>el.id===id ?{ ...el, done:!el.done}:el)})}
